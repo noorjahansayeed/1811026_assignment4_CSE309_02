@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.container {
+    margin: 20px;
+    padding: 50px;
+    width: 1100px;
+    height: 92%;
+    border: 2px solid rgb(71, 70, 70);
+    border-radius: 20px;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('earth.png');
+    background-size: cover;    
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    /* gap: 50px; */
+    align-items: space-between;
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.main-section {
+    font-size: 80px;
+}
+
+.secondary-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.separator {
+    content: "";
+    border-left: 2px solid rgb(129, 126, 126);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    outline: none;
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    border: 2px solid rgb(71, 70, 70);
+    border-radius: 10px;
+}
+
+button {
+    outline: none;
+    padding: 10px;
+    height: 50px;
+    background-color: rgb(71, 70, 70);
+    border: 2px solid rgb(71, 70, 70);
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 2px solid rgb(129, 126, 126);
+    background-color: rgb(129, 126, 126);
+}
+
+/* @media only screen and (max-width: 400px) {
+    .container {
+        width: 600px;
+        width: 92%;
+    }
+} */

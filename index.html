@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Weather</h1>
+      <form onclick="setWeather(); return false;">
+        <input type="text" name="search" id="search" placeholder="City Name (e.g. Dhaka)">
+        <button>Search</button>
+      </form>
+    </div>
+    <p id="city"></p>
+    <div class="inner-container">
+      <div class="main-panel">
+        <div class="main-section">
+          <span style="font-size: inherit;" id="day_1_temp"></span> °C
+          <p id="day_1"></p>
+        </div>
+          <h2 id="day_1_description"></h1>
+          <div>
+            <p>Feels Like <span id="day_1_feels_like"></span> °C</p>
+            <p>Humidity: <span id="day_1_humidity"></span>%</p>
+          </div>
+          <div>
+            <p>Wind: <span id="day_1_wind"></span> km/h</p>
+            <p>Pressure: <span id="day_1_pressure"></span> N m<sup>–2</sup></p>
+          </div>
+      </div>
+      <div class="secondary-panel">
+        <div class="secondary-section">
+          <p id="day_2"></p>
+          <h1><span style="font-size: inherit;" id="day_2_temp"></span> °C</h1>
+          <p id="day_2_description"></p>
+          <p>Feels Like <span id="day_2_feels_like"></span> °C</p>
+          <p>Humidity: <span id="day_2_humidity"></span>%</p>
+          <p>Wind: <span id="day_2_wind"></span> km/h</p>
+          <p>Pressure: <span id="day_2_pressure"></span> N m<sup>–2</sup></p>
+        </div>
+        <div class="separator"></div>
+        <div class="secondary-section">
+          <p id="day_3"></p>
+          <h1><span style="font-size: inherit;" id="day_3_temp"></span> °C</h1>
+          <p id="day_3_description"></p>
+          <p>Feels Like <span id="day_3_feels_like"></span> °C</p>
+          <p>Humidity: <span id="day_3_humidity"></span>%</p>
+          <p>Wind: <span id="day_3_wind"></span> km/h</p>
+          <p>Pressure: <span id="day_3_pressure"></span> N m<sup>–2</sup></p>
+        </div>
+        <div class="separator"></div>
+        <div class="secondary-section">
+          <p id="day_4"></p>
+          <h1><span style="font-size: inherit;" id="day_4_temp"></span> °C</h1>
+          <p id="day_4_description"></p>
+          <p>Feels Like <span id="day_4_feels_like"></span> °C</p>
+          <p>Humidity: <span id="day_4_humidity"></span>%</p>
+          <p>Wind: <span id="day_4_wind"></span> km/h</p>
+          <p>Pressure: <span id="day_4_pressure"></span> N m<sup>–2</sup></p>
+        </div>
+        <div class="separator"></div>
+        <div class="secondary-section">
+          <p id="day_5"></p>
+          <h1><span style="font-size: inherit;" id="day_5_temp"></span> °C</h1>
+          <p id="day_5_description"></p>
+          <p>Feels Like <span id="day_5_feels_like"></span> °C</p>
+          <p>Humidity: <span id="day_5_humidity"></span>%</p>
+          <p>Wind: <span id="day_5_wind"></span> km/h</p>
+          <p>Pressure: <span id="day_5_pressure"></span> N m<sup>–2</sup></p>
+        </div>
+    </div>
+  </div>
+  <script>
+    const today = new Date();
+    const month = today.toLocaleString('en-EN', { month: 'long' });
+    const year = today.getFullYear();
+    
+    const day_1 = today.getDate();
+    const day_2 = day_1 + 1;
+    const day_3 = day_1 + 2;
+    const day_4 = day_1 + 3;
+    const day_5 = day_1 + 4;
+    
+    const view_1 = document.querySelector('#day_1');
+    const view_2 = document.querySelector('#day_2');
+    const view_3 = document.querySelector('#day_3');
+    const view_4 = document.querySelector('#day_4');
+    const view_5 = document.querySelector('#day_5');
+    
+    view_1.innerHTML = `Today, ${month} ${day_1}, ${year}`;
+    view_2.innerHTML = `${month} ${day_2}, ${year}`;
+    view_3.innerHTML = `${month} ${day_3}, ${year}`;
+    view_4.innerHTML = `${month} ${day_4}, ${year}`;
+    view_5.innerHTML = `${month} ${day_5}, ${year}`;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
